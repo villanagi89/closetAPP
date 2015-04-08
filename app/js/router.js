@@ -6,19 +6,17 @@ var router = (function (module) {
   var Router = Backbone.Router.extend({
     routes:{
       '': 'home',
-      'uploadImage': 'uploadImage'
+      'uploadArticle': 'uploadArticle'
     },
+
     home: function(){
-      $('#content').empty();
-      $.ajax({
-        // youcloset-api.herokuapp.com/users/1/closets
-        url: module.host + '/users/1/closets',
-        type: 'GET'
-      }).done().fail();
+      console.log('im home function');
+      $('#content').empty().load('partials/allArticles.html');
+      allArticles.init();
     },
-    uploadImage: function (){
+
+    uploadArticle: function(){
       $('#content').empty().load('partials/image-upload.html');
-      aws.init();
     },
  });
 
@@ -33,4 +31,9 @@ var router = (function (module) {
 
 $(document).ready(function(){
   router.backbone();
+  $('body').on('click', '#uploadArticle', function(e){
+    e.preventDefault();
+    console.log('after');
+    aws.init();
+  });
 });

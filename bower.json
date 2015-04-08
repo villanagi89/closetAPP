@@ -23,6 +23,7 @@
     "bourbon": "~4.2.2",
     "neat": "~1.7.2",
     "requirejs": "~2.1.17",
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "bitters": "~1.0.0"
   }
 }
