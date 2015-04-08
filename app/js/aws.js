@@ -48,19 +48,20 @@ var aws = (function(module){
     });
   };
   module.sendAwsToRails = function(data){
-    var amazonURL = 'https://s3.amazonaws.com/you.closet.api' + data.key;
     var artName = $('#title').val();
-    console.log($('#title').val());
-    // var closetId =
+    var amazonURL = 'https://s3.amazonaws.com/you.closet.api/' + data.key;
+    var artCategory = $('#category :selected').val();
+    var artType = $('#article_type :selected').val();
+    // var closetId = ;
     $.ajax({
-      url: 'http://youcloset-api.herokuapp.com/closets/1/articles',
+      url: 'http://youcloset-api.herokuapp.com/articles',
       type: 'POST',
       data: { article: {
         name: artName,
         url: amazonURL,
-        category: 'everyday'
-        // article_type: 1,
-        // favorite: false
+        category: artCategory,
+        article_type: artType
+        // closet_id: closetId
          }},
     }).done(function(data){
       console.log(data);
