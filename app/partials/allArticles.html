@@ -3,12 +3,11 @@
     <h2 id="{{id}}">{{closet.name}}</h2>
 </div>
 
-<div class="grid-items-lines">
+<div class="grid-items-lines" >
   <ul>
   {{#each articles}}
-    <li>
-     <a href="#" class="tab-link is-active"></a>
-      <div class="grid-item">
+    <li class="{{category}}">
+      <div class="grid-item" >
         <p>{{name}}</p>
         <img src="{{url}}">
         <p>Category: {{category}}</p>

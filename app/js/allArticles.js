@@ -1,6 +1,15 @@
 'use strict';
 var allArticles = (function(module){
 
+   $('.categories').on('click', function(event){
+     var categoryId = event.target.id;
+
+     var selector = '.grid-items-lines ' + '.' + categoryId;
+
+     $('.grid-items-lines li').hide();
+     $(selector).show();
+   });
+
   module.init = function(){
     $.ajax({
         // youcloset-api.herokuapp.com/users/1/closets

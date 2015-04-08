@@ -22,7 +22,6 @@ var router = (function (module) {
 
   module.router = new Router();
   module.backbone = function(){
-    console.log('this is the home page');
     Backbone.history.start();
   };
   return module;
@@ -33,7 +32,6 @@ $(document).ready(function(){
   router.backbone();
   $('body').on('click', '#uploadArticle', function(e){
     e.preventDefault();
-    console.log('after');
     aws.init();
   });
 });
