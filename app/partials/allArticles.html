@@ -1,6 +1,51 @@
 <script id="all_articles_template" type="text/x-handlebars-template">
-
-  {{#articles}}
-    {{name}}
-  {{/articles}}
+<div>
+    <h2 id="{{id}}">{{closet.name}}</h2>
+</div>
+<ul class="accordion-tabs-minimal">
+  <li class="tab-header-and-content">
+    <a href="#" class="tab-link is-active">Shirts</a>
+    <div class="tab-content">
+    </div>
+  </li>
+  <li class="tab-header-and-content">
+    <a href="#" class="tab-link">Dresses</a>
+    <div class="tab-content">
+    </div>
+  </li>
+  <li class="tab-header-and-content">
+    <a href="#" class="tab-link">Pants</a>
+    <div class="tab-content">
+    </div>
+  </li>
+  <li class="tab-header-and-content">
+    <a href="#" class="tab-link">Outerwear</a>
+    <div class="tab-content">
+    </div>
+  </li>
+  <li class="tab-header-and-content">
+    <a href="#" class="tab-link">Accessories</a>
+    <div class="tab-content">
+    </div>
+  </li>
+   <li class="tab-header-and-content">
+    <a href="#" class="tab-link">Jewelry</a>
+    <div class="tab-content">
+    </div>
+  </li>
+  <li class="tab-header-and-content">
+    <a href="#" class="tab-link">Shoes</a>
+    <div class="tab-content">
+    </div>
+  </li>
+</ul>
+<div class="grid-items-lines">
+  {{#each articles}}
+    <div class="grid-item">
+      <p>{{name}}</p>
+      <img src="{{url}}">
+      <p>{{category}}</p>
+  {{/each}}
+    </div>
+</div>
 </script>

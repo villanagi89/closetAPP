@@ -1,10 +1,32 @@
 <form class='a' id="new-upload-form">
-<div>
-  <label>Title</label>
-  <input type="text" name="title" placeholder="title goes here" id="title">
-  <input type='file' id='file'>
-</div>
-<div>
-</div>
-<button id='uploadArticle'>Submit</button>
+  <h2>Upload an image to your closet</h2>
+  <div>
+    <label for="description_field">Item description:</label>
+    <input type="text" name="description_field" placeholder="description" id="title">
+    <label for="select_categories">Select article options:</label>
+    <select name="select_categories">
+      <optgroup label="category">
+      <option value="everyday">Everyday</option>
+      <option value="work">Work</option>
+      <option value="evening">Evening</option>
+      <option value="event">Event</option>
+      <option value="active">Active</option>
+      <option value="vacation">Vacation</option>
+      </optgroup>
+    </select>
+    <select name="select_type">
+      <optgroup label="type">
+      <option value="shoes">Shoes</option>
+      <option value="shirts">Shirt</option>
+      <option value="dresses">Dress</option>
+      <option value="pants">Pants</option>
+      <option value="outerwear">Outerwear</option>
+      <option value="accessories">Accessories</option>
+      <option value="jewelry">Jewelry</option>
+      </optgroup>
+    </select>
+    <label for="file">File Upload:</label>
+    <input type='file' id='file'>
+    <input type="submit" value="Submit" id='uploadArticle'>
+  </div>
 </form>
