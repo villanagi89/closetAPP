@@ -1,7 +1,7 @@
-//bower: scss
-@import "../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
-@import "../bower_components/bitters/app/assets/stylesheets/base";
-@import "../bower_components/neat/app/assets/stylesheets/_neat.scss";
+//bower:scss
+@import "bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "bitters/app/assets/stylesheets/_base.scss";
+@import "neat/app/assets/stylesheets/_neat.scss";
 //endbower
 
 @import 'partials/nav';
