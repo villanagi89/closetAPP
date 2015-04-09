@@ -9,6 +9,10 @@ var allArticles = (function(module){
      $(selector).show();
    });
 
+    $('#allArticles').on('click', function(event){
+    $('.grid-items-lines li').show();
+   });
+
   module.init = function(){
     $.ajax({
         // youcloset-api.herokuapp.com/users/1/closets

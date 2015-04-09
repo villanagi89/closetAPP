@@ -1,3 +1,4 @@
+/*global $:false*/
 'use strict';
 var aws = (function(module){
 
@@ -52,7 +53,7 @@ var aws = (function(module){
     var amazonURL = 'https://s3.amazonaws.com/you.closet.api/' + data.key;
     var artCategory = $('#category :selected').val();
     var artType = $('#article_type :selected').val();
-    // var closetId = ;
+    // var closetId = $('.show-closet').data("closet-id");
     $.ajax({
       url: 'http://youcloset-api.herokuapp.com/articles',
       type: 'POST',
@@ -74,5 +75,4 @@ var aws = (function(module){
 })(aws || {});
 
 $(document).ready(function(){
-
 });
