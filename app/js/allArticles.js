@@ -3,7 +3,6 @@ var allArticles = (function(module){
 
    $('.categories').on('click', function(event){
      var categoryId = event.target.id;
-
      var selector = '.grid-items-lines ' + '.' + categoryId;
 
      $('.grid-items-lines li').hide();

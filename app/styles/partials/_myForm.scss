@@ -1,0 +1,14 @@
+div.formContainer {
+  @include outer-container;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  form.uploadForm {
+    @include span-columns(8);
+     padding-top: 50px;
+     padding-bottom: 50px;
+     max-width: 50%;
+
+  }
+}
+
