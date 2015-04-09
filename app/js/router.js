@@ -6,11 +6,16 @@ var router = (function (module) {
   var Router = Backbone.Router.extend({
     routes:{
       '': 'home',
+      'showArticles': 'showArticles',
       'uploadArticle': 'uploadArticle'
     },
 
+
     home: function(){
-      console.log('im home function');
+      $('#content').empty().load('partials/mainPage.html');
+    },
+
+    showArticles: function(){
       $('#content').empty().load('partials/allArticles.html');
       allArticles.init();
     },
