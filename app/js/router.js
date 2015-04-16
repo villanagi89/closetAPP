@@ -1,3 +1,4 @@
+/*global $:false*/
 'use strict';
 
 var router = (function (module) {
@@ -7,7 +8,8 @@ var router = (function (module) {
     routes:{
       '': 'home',
       'showArticles': 'showArticles',
-      'uploadArticle': 'uploadArticle'
+      'uploadArticle': 'uploadArticle',
+      'userSignUp': 'userSignUp'
     },
 
 
@@ -23,6 +25,11 @@ var router = (function (module) {
     uploadArticle: function(){
       $('#content').empty().load('partials/image-upload.html');
     },
+    userSignUp: function(){
+      $('#content').empty().load('partials/user.html');
+      userForm.init();
+    }
+
  });
 
   module.router = new Router();
