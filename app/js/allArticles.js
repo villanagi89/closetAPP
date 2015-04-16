@@ -1,12 +1,13 @@
+/*global $:false*/
 'use strict';
 var allArticles = (function(module){
 
-   $('.categories').on('click', function(event){
-     var categoryId = event.target.id;
-     var selector = '.grid-items-lines ' + '.' + categoryId;
+    $('.categories').on('click', function(event){
+      var categoryId = event.target.id;
+      var selector = '.grid-items-lines ' + '.' + categoryId;
 
-     $('.grid-items-lines li').hide();
-     $(selector).show();
+    $('.grid-items-lines li').hide();
+    $(selector).show();
    });
 
     $('#allArticles').on('click', function(event){
