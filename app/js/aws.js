@@ -65,6 +65,7 @@ var aws = (function(module){
         // closet_id: closetId
          }},
     }).done(function(data){
+      window.location.href = '/';
       console.log(data);
     }).fail(function(jqXHR, textStatus, errorThrown){
       console.log(jqXHR, textStatus, errorThrown);
