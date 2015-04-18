@@ -12,7 +12,6 @@ var router = (function (module) {
       'userSignUp': 'userSignUp'
     },
 
-
     home: function(){
       $('#content').empty().load('partials/mainPage.html');
     },
@@ -26,8 +25,7 @@ var router = (function (module) {
       $('#content').empty().load('partials/image-upload.html');
     },
     userSignUp: function(){
-      $('#content').empty().load('partials/user.html');
-      userForm.init();
+      $('#content').empty().load('partials/signup.html');
     }
 
  });
@@ -45,5 +43,10 @@ $(document).ready(function(){
   $('body').on('click', '#uploadArticle', function(e){
     e.preventDefault();
     aws.init();
+  });
+ $('body').on('click','#signup-form', function(e){
+    e.preventDefault();
+    console.log('clicked');
+    userForm.init();
   });
 });
