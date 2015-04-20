@@ -9,7 +9,8 @@ var router = (function (module) {
       '': 'home',
       'showArticles': 'showArticles',
       'uploadArticle': 'uploadArticle',
-      'userSignUp': 'userSignUp'
+      'userSignUp': 'userSignUp',
+      'userProfile': 'myProfile'
     },
 
     home: function(){
@@ -26,6 +27,11 @@ var router = (function (module) {
     },
     userSignUp: function(){
       $('#content').empty().load('partials/signup.html');
+    },
+
+    myProfile: function(){
+      $('#content').empty().load('partials/userProfile.html');
+      userProfile.init();
     }
 
  });

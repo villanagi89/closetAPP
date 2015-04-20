@@ -14,8 +14,7 @@ var userForm = (function(module){
     $('#sign-out').on('click', module.signOut);
   };
 
-  module.submitRegistration = function(event){
-    event.preventDefault();
+  module.submitRegistration = function(){
     $.ajax({
       url: apiHost + '/users',
       type: 'POST',
