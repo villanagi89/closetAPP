@@ -7,19 +7,19 @@ var userProfile = (function(module){
   module.init = function(){
   id = localStorage.getItem('id');
   apiHost = 'https://youcloset-api.herokuapp.com';
-  module.getUser();
+  module.getUser(id);
   };
 
-  module.getUsers = function(id){
+  module.getUser = function(id){
     $.ajax({
       url: apiHost + '/users/' + id,
       type: 'GET',
       dataType: 'JSON'
     }).done(function(data){
       console.log(data);
-      var template = Handlebars.compile($('').html());
+      var template = Handlebars.compile($('#user_profile_template').html());
       $('#content').html(template({
-        users: data
+        user: data
       }));
     }).fail(function(jqXHR, textStatus, errorThrown){
         console.log(jqXHR, textStatus, errorThrown);
