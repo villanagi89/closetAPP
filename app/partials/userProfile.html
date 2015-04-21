@@ -1,7 +1,19 @@
 <script id="user_profile_template" type="text/x-handlebars-template">
   {{#user}}
-    <div id=user-{{this.id}}>
+    <div id='user-{{id}}'>
       <h2>{{username}}</h2>
+      <p>Email: {{email}}</p>
+      <p>Your closets: {{#each closet}} {{name}} {{created_at}} {{/each}}</p>
+      <button id='createCloset'type='button'>Add closet</button>
+
+      <div class="formContainer">
+        <form id="add-closet-form">
+          <h2>Add a closet</h2>
+          <label for="name">Closet Name</label>
+          <input type="text" name="name" placeholder="Closet Name" id="name">
+          <input type="submit" value="sumbit" id="add-closet" data-id="{{this.id}}">
+        </form>
+      </div>
     </div>
   {{/user}}
 </script>
