@@ -32,7 +32,7 @@ var router = (function (module) {
     myProfile: function(){
       $('#content').empty().load('partials/userProfile.html');
       userProfile.init();
-    }
+    },
 
  });
 
@@ -52,7 +52,6 @@ $(document).ready(function(){
   });
  $('body').on('click','#signup-form', function(e){
     e.preventDefault();
-    console.log('clicked');
     userForm.init();
   });
 });
