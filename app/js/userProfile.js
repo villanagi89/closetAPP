@@ -22,8 +22,14 @@ var userProfile = (function(module){
         user: data
       }));
       $('form#add-closet-form').hide();
+
       $('#createCloset').on('click',function() {
         $('form#add-closet-form').toggle();
+        $('#add-closet').on('click', function(event){
+          event.preventDefault();
+          module.createCloset();
+          module.getUser();
+        });
       });
 
     }).fail(function(jqXHR, textStatus, errorThrown){
@@ -32,6 +38,7 @@ var userProfile = (function(module){
   };
 
   module.createCloset = function(id){
+    id = localStorage.getItem('id');
     $.ajax({
       // POST /users/:user_id/closets(.:format)      closets#create
       url: apiHost + '/users/' + id + '/closets',
@@ -40,6 +47,7 @@ var userProfile = (function(module){
       data:{
         closet: {
           name: $('#name').val(),
+          user_id: id,
         }
       }
     }).done(function(data){

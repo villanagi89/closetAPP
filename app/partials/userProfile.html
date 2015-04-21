@@ -1,9 +1,24 @@
 <script id="user_profile_template" type="text/x-handlebars-template">
   {{#user}}
     <div id='user-{{id}}'>
+    <h1>Hello! There:</h1>
       <h2>{{username}}</h2>
       <p>Email: {{email}}</p>
-      <p>Your closets: {{#each closet}} {{name}} {{created_at}} {{/each}}</p>
+      <table class="table-minimal">
+        <thead>
+          <tr>
+            <th>Your closets:</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each closets}}
+          <tr>
+            <td>{{name}}</td>
+            <td><button>delete</button></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
       <button id='createCloset'type='button'>Add closet</button>
 
       <div class="formContainer">
@@ -11,9 +26,10 @@
           <h2>Add a closet</h2>
           <label for="name">Closet Name</label>
           <input type="text" name="name" placeholder="Closet Name" id="name">
-          <input type="submit" value="sumbit" id="add-closet" data-id="{{this.id}}">
+          <button id="add-closet" type="submit">submit</button>
         </form>
       </div>
     </div>
   {{/user}}
 </script>
+
