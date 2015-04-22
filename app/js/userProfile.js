@@ -24,11 +24,10 @@ var userProfile = (function(module){
       $('form#add-closet-form').hide();
 
       $('#createCloset').on('click',function() {
-        $('form#add-closet-form').toggle();
-        $('#add-closet').on('click', function(event){
-          event.preventDefault();
-          module.createCloset();
-          module.getUser();
+      $('form#add-closet-form').toggle();
+      $('#add-closet').on('click', function(event){
+        event.preventDefault();
+        module.createCloset();
         });
       });
 
@@ -52,6 +51,7 @@ var userProfile = (function(module){
       }
     }).done(function(data){
       console.log(data);
+      location.reload();
     }).fail(function(jqXHR, textStatus, errorThrown){
       console.log(jqXHR, textStatus, errorThrown);
     });

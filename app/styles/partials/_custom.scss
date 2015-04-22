@@ -1,0 +1,46 @@
+//mainPage.html
+body{
+  height: 100%;
+}
+
+.container{
+  height: 100%;
+  #content{
+    height: 100%;
+  }
+  .hero{
+    height: 100%;
+  }
+}
+
+.hero-copy{
+    h1{
+      font-family: 'Patua One', cursive;
+      font-size: 50px;
+    }
+}
+
+// userProfile.html
+
+#userProfile{
+  width: 100px;
+  float: left;
+  margin: 150px;
+
+    h1{
+      font-family: 'Patua One', cursive;
+    }
+
+    #createCloset{
+    margin-bottom: 30px;
+  }
+}
+.formContainer{
+  width: 150px;
+  max-width: 100px;
+}
+
+.table-minimal{
+  margin-left: 150px;
+  padding-bottom: 50px;
+}

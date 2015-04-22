@@ -6,7 +6,7 @@
   $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
+  $hero-image: '../images/balloons-birthday-celebration-2013.jpg';
 
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
   background-color: #324766;
@@ -29,11 +29,14 @@
     text-align: center;
 
     .hero-copy {
+      font-family: 'Patua One', cursive;
       text-align: center;
 
       h1 {
-        font-size: 1.6em;
+        // font-size: 1.6em;
+        font-size: 50px;
         margin-bottom: 0.5em;
+        font-family: 'Patua One', cursive;
 
         @include media($large-screen) {
           font-size: 1.8em;

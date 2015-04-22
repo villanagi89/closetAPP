@@ -4,6 +4,7 @@
 @import "neat/app/assets/stylesheets/_neat.scss";
 //endbower
 
+@import 'partials/custom';
 @import 'partials/nav';
 @import 'partials/footer';
 @import 'partials/table';
@@ -11,4 +12,7 @@
 @import 'partials/myForm';
 @import 'partials/heroMain';
 
+//fonts
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
 
