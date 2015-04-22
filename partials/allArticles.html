@@ -1,0 +1,20 @@
+<script id="all_articles_template" type="text/x-handlebars-template">
+  <div>
+      <h2 id="{{id}}">{{closet.name}}</h2>
+  </div>
+
+  <div class="grid-items-lines" >
+    <ul>
+    {{#each articles}}
+      <li class="{{category}}">
+        <div class="grid-item" >
+          <p>{{name}}</p>
+          <img src="{{url}}">
+          <p>Category: {{category}}</p>
+          <p>Article: {{article_type}}</p>
+        </div>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+</script>

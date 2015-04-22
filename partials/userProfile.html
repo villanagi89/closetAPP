@@ -1,0 +1,36 @@
+<script id="user_profile_template" type="text/x-handlebars-template">
+  {{#user}}
+  <div id='user-{{id}}'>
+    <div id="userProfile">
+      <h1>Hello! There:</h1>
+      <h2>{{username}}</h2>
+      <p>Email: {{email}}</p>
+      <button id='createCloset'type='button'>Add closet</button>
+        <div class="formContainer">
+          <form id="add-closet-form">
+            <h2>Add a closet</h2>
+            <label for="name">Closet Name</label>
+            <input type="text" name="name" placeholder="Closet Name" id="name">
+            <button id="add-closet" type="submit">submit</button>
+          </form>
+        </div>
+    </div>
+    <table class="table-minimal">
+      <thead>
+        <tr>
+          <th>Your closets:</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each closets}}
+        <tr>
+          <td>{{name}}</td>
+          <td><button>delete</button></td>
+        </tr>
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+  {{/user}}
+</script>
+
